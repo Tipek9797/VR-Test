@@ -615,6 +615,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Play
       objectReference: {fileID: 0}
+    - target: {fileID: 785457023210489151, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.44
+      objectReference: {fileID: 0}
     - target: {fileID: 1297984435258940533, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1
@@ -722,6 +726,18 @@ PrefabInstance:
       value: 'Play
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563000100509318567, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563000100509318567, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563000100509318567, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -890,7 +906,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -1624.1, y: -637.2}
+  m_SizeDelta: {x: -1038.6, y: -268.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &748229746
 MonoBehaviour:
@@ -968,6 +984,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Settings
       objectReference: {fileID: 0}
+    - target: {fileID: 785457023210489151, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.44
+      objectReference: {fileID: 0}
     - target: {fileID: 1297984435258940533, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1
@@ -983,6 +1003,30 @@ PrefabInstance:
     - target: {fileID: 1443530822556838902, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465067545822792840, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465067545822792840, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465067545822792840, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465067545822792840, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465067545822792840, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465067545822792840, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 2735640806974843374, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
       propertyPath: m_text
@@ -1073,6 +1117,14 @@ PrefabInstance:
     - target: {fileID: 8563000100509318567, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
       propertyPath: m_text
       value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563000100509318567, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563000100509318567, guid: 5e3dfb7e5eb2e4f47a42f0495cf43dd9, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1504,7 +1556,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &1302326307
 RectTransform:
