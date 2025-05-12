@@ -254,7 +254,7 @@ MonoBehaviour:
     - {x: 0.1151107, y: 0.04873112, z: -0.001109484, w: 0.992156}
   _targetHandPose:
     _handedness: 1
-    _fingersFreedom: 0200000002000000010000000100000000000000
+    _fingersFreedom: 0200000002000000020000000200000002000000
     _jointRotations:
     - {x: -0.06665303, y: -0.39692008, z: 0.5750258, w: 0.71229005}
     - {x: 0.2201137, y: 0.050169144, z: -0.08162888, w: 0.9707573}
@@ -276,7 +276,7 @@ MonoBehaviour:
     - {x: 0.36025816, y: 0.025496999, z: -0.06776038, w: 0.930039}
     - {x: 0.11511071, y: -0.04873112, z: 0.0011094844, w: 0.992156}
   _ghostProvider: {fileID: 0}
-  _handGhostProvider: {fileID: 0}
+  _handGhostProvider: {fileID: 11400000, guid: 9b9df4f150839de48af887d742aabf53, type: 2}
   _ovrOffsetMode: 0
 --- !u!1 &5616676671029347174
 GameObject:
@@ -350,7 +350,7 @@ MonoBehaviour:
     - {x: 0.1151107, y: 0.04873112, z: -0.001109484, w: 0.992156}
   _targetHandPose:
     _handedness: 0
-    _fingersFreedom: 0200000002000000010000000100000000000000
+    _fingersFreedom: 0200000002000000020000000200000002000000
     _jointRotations:
     - {x: -0.06665304, y: 0.3969201, z: -0.5750258, w: 0.71229}
     - {x: 0.2201137, y: -0.05016914, z: 0.08162888, w: 0.9707573}
@@ -595,7 +595,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8005835962138051408}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
@@ -661,6 +661,8 @@ GameObject:
   - component: {fileID: 6256407048627479950}
   - component: {fileID: 5126345027137278376}
   - component: {fileID: 959050469517501408}
+  - component: {fileID: 4919134918710229404}
+  - component: {fileID: 6470692384095593141}
   m_Layer: 0
   m_Name: Flashlight
   m_TagString: Untagged
@@ -715,7 +717,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!114 &959050469517501408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,6 +740,77 @@ MonoBehaviour:
   _rigidbody: {fileID: 5126345027137278376}
   _kinematicWhileSelected: 1
   _throwWhenUnselected: 1
+--- !u!114 &4919134918710229404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224782452679998516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointable: {fileID: 0}
+  _whenRelease:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenHover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnhover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6470692384095593141}
+        m_TargetAssemblyTypeName: Flashlight, Assembly-CSharp
+        m_MethodName: LightOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6470692384095593141}
+        m_TargetAssemblyTypeName: Flashlight, Assembly-CSharp
+        m_MethodName: LighOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _whenMove:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenCancel:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6470692384095593141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224782452679998516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109884dcc4e0dc646b5df460a9380217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lens: {fileID: 2100000, guid: b60973752a0f53043a17cbeace901086, type: 2}
 --- !u!1 &8790523598117203685
 GameObject:
   m_ObjectHideFlags: 0
