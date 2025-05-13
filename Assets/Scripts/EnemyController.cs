@@ -118,6 +118,7 @@ public class EnemyController : MonoBehaviour
             agent.SetDestination(player.transform.position);
             if(distanceToPlayer > chaseRange)
             {
+                Debug.Log("distance: " + distanceToPlayer);
                 agent.isStopped = true;
                 agent.velocity = Vector3.zero;
                 timeSinceLastSawPlayer -= Time.deltaTime;
@@ -132,6 +133,7 @@ public class EnemyController : MonoBehaviour
                 
             if(distanceToPlayer <= attackRange)
             {
+                Debug.Log("distance222: " + distanceToPlayer);
                 animator.Play("Z_Attack");
                 currentState = AIState.Attacking;
                 agent.velocity = Vector3.zero;
