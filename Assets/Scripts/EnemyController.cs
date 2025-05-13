@@ -56,6 +56,12 @@ public class EnemyController : MonoBehaviour
         waitCounter = waitAtPoint;
         timeSinceLastSawPlayer = suspiciousTime;
         timeToAttack = attackTime;
+
+        if (!agent.isOnNavMesh)
+        {
+            Debug.LogWarning("Enemy nie je na NavMesh!");
+        }
+
     }
 
     void Update()
