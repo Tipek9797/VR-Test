@@ -45,18 +45,28 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
+    animator = GetComponent<Animator>();
+    agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 
-        animator = GetComponent<Animator>();
-
-        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        player = GameObject.FindGameObjectWithTag("Player");
-
-        playerScript = player.GetComponent<Player>();
-
-        waitCounter = waitAtPoint;
-        timeSinceLastSawPlayer = suspiciousTime;
-        timeToAttack = attackTime;
+    player = GameObject.FindGameObjectWithTag("Player");
+    if (player == null)
+    {
+        Debug.LogError("Hráč s tagom 'Player' nebol nájdený!");
     }
+    else
+    {
+        playerScript = player.GetComponent<Player>();
+        if (playerScript == null)
+        {
+            Debug.LogError("Na objekte hráča chýba skript 'Player'!");
+        }
+    }
+
+    waitCounter = waitAtPoint;
+    timeSinceLastSawPlayer = suspiciousTime;
+    timeToAttack = attackTime;
+}
+
 
     void Update()
     {
@@ -145,6 +155,7 @@ public class EnemyController : MonoBehaviour
                 if (distanceToPlayer <= attackRange)
                 {
                     playerScript.setHealth(-10f); // Uberie 10 HP pri útoku
+                    
                 }
             }
 
