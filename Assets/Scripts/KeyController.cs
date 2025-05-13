@@ -2,20 +2,17 @@ using UnityEngine;
 
 public class KeyController : MonoBehaviour
 {
-    private bool canWin = false;
+    private FinishZone finishZone;
+
+    private void Start() {
+        finishZone = FindObjectOfType<FinishZone>();
+    }
 
     public void CanWinTrue()
     {
-        canWin = true; 
-    }
+        finishZone.SetCanWinTrue();
+        Debug.Log("canwintrue in keyController");
+        Destroy(transform.parent.gameObject);
 
-    public void CanWinFalse()
-    {
-        canWin = false;
-    }
-
-    public bool CanWin()
-    {
-        return canWin;
     }
 }

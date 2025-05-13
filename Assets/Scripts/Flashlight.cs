@@ -9,17 +9,14 @@ public class Flashlight : MonoBehaviour
     void Start()
     {
         light = GetComponentInChildren<Light>();
-        Debug.Log("found flaslight ?: ", light);
     }
     public void LightOn()
     {
-        Debug.Log("lights oooooooooooooooooooon");
         light.enabled = true;
     }
 
     public void LighOff()
     {
-        Debug.Log("lights oooooooooooooooooooof");
         light.enabled = false;
     }
 

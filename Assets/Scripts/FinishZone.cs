@@ -3,17 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class FinishZone : MonoBehaviour
 {
-    private KeyController keyController;
+    private bool canWin = false;
+
+    public void SetCanWinTrue()
+    {
+        canWin = true;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (keyController == null)
-        {
-            keyController = FindObjectOfType<KeyController>();
-        }
-
-        bool win = keyController != null && keyController.CanWin();
-        if (other.CompareTag("Player") && win)
+        Debug.Log("can win ? : " +canWin);
+        Debug.Log("who are you ? : "+ other.name);
+        if (other.CompareTag("Player") && canWin)
         {
             TriggerWin();
         }
