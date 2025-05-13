@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -26,5 +27,12 @@ public class Player : MonoBehaviour
         Health = Mathf.Clamp(Health, 0, MaxHealth);
 
         healthBar.SetHealth(Health);
+
+        if (Health <= 0)
+        {
+        // Načítaj scénu koniec
+            SceneManager.LoadScene("MainMenu");
+        }
     }
+    
 }
